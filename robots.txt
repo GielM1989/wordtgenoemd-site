@@ -1,0 +1,26 @@
+# robots.txt voor wordtgenoemd.nl
+
+# Alles toegestaan voor gewone zoekmachines
+User-agent: *
+Allow: /
+
+# AI-crawlers expliciet toestaan (zodat je in AI-antwoorden kunt verschijnen)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://wordtgenoemd.nl/sitemap.xml
