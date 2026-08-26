@@ -133,6 +133,27 @@ footer{border-top:1px solid var(--lijn);padding:26px 0}
   .foot{flex-direction:column;text-align:center}
   .topbar{font-size:12px}
 }
+
+/* ---------- RAPPORT-KAART COMPACTER (mobiel) ---------- */
+/* Op de telefoon staat deze kaart bovenaan en is hij standaard 448px hoog,
+   waardoor hij bijna het hele eerste scherm vult. Hier maken we hem kleiner,
+   zodat de titel en het formulier hoger in beeld komen.                     */
+@media(max-width:560px){
+  .cover-wrap{padding:2px 0}
+  .rstack{width:206px;height:288px}
+  .rpg{border-radius:11px}
+  .rcover2{padding:20px 18px;border-radius:11px}
+  .rcover2 .rlogo{font-size:13px}
+  .rc-kick{font-size:9px;letter-spacing:.12em}
+  .rc-title{font-size:21px;margin-top:8px}
+  .rc-rule{width:40px;height:5px;margin-top:12px}
+  .rc-foot{font-size:9px;padding-top:10px}
+  .rseal{width:74px;height:74px;right:-12px;bottom:-12px;border-width:2px}
+  .rseal .v{font-size:20px}
+  .rseal .l{font-size:8px}
+  /* minder afstand tussen de kaart en de rest van de hero */
+  .hero{gap:24px;padding:10px 0 40px}
+}
 </style>
 </head>
 <body>
