@@ -4,6 +4,22 @@
 <meta charset="utf-8">
 <meta name="facebook-domain-verification" content="wd1ldy5d523dvm5xvt7lngbt3p6cno" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '421479435776566');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=421479435776566&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 <title>wordtgenoemd — word genoemd wanneer klanten ChatGPT om advies vragen</title>
 <meta name="description" content="wordtgenoemd zorgt dat webshops worden aanbevolen in AI-antwoorden zoals ChatGPT. Van bekend naar aanbevolen, met meetbaar werk in plaats van beloftes.">
 
@@ -1460,6 +1476,8 @@
       body: new URLSearchParams(data).toString()
     }).catch(function(err){ console.log('form error', err); });
 
+    // Meta Pixel: lead registreren
+    if(window.fbq)fbq('track','Lead');
     // resultaten direct tonen, ongeacht of de verzending klaar is
     if(window.__quizUnlock)window.__quizUnlock();
     form.reset();
@@ -1492,6 +1510,7 @@
     e.preventDefault();
     var form=e.target;var data=new FormData(form);
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()}).catch(function(err){console.log('form error',err);});
+    if(window.fbq)fbq('track','Lead');
     form.style.display='none';var done=document.getElementById('scanDone');if(done)done.hidden=false;form.reset();return false;
   }
   window.scanSubmit=scanSubmit;
